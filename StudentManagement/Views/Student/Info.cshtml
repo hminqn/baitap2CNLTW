@@ -1,0 +1,17 @@
+@model string
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin sinh viên</title>
+</head>
+<body>
+    <p>Tên: @ViewBag.Name</p>
+    <p>Tuổi: @ViewData["Age"]</p>
+    <p>Ngành: @Model</p>
+</body>
+</html>

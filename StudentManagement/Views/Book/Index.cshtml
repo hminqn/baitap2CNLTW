@@ -1,0 +1,24 @@
+@model IReadOnlyList<Book>
+@{
+    ViewData["Title"] = "Danh sách sách";
+}
+<h1>Danh sách sách</h1>
+@if (TempData["Success"] is string message)
+{
+    <p class="message" role="status">@message</p>
+}
+<a class="button" asp-action="Create">Thêm sách</a>
+<table>
+    <thead><tr><th scope="col">Id</th><th scope="col">Name</th><th scope="col">Price</th><th scope="col">Thao tác</th></tr></thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Name</td>
+            <td>@book.Price</td>
+            <td><a asp-action="Detail" asp-route-id="@book.Id">Chi tiết</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

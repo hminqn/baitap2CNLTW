@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# Tài liệu demo và các file kiểm tra chỉ dùng trên máy.
+.docx-qa/
+Huong_dan_demo_ASP_NET_MVC.docx
+StudentManagement/Verify.ps1
